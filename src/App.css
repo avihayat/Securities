@@ -1,0 +1,230 @@
+.app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+/* ── Header ── */
+
+header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+header h1 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #1a1a2e;
+}
+
+/* ── Add Form ── */
+
+.add-form {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 28px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.add-form h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-field input {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+  direction: rtl;
+}
+
+.form-field input:focus {
+  outline: none;
+  border-color: #4f6ef7;
+  box-shadow: 0 0 0 3px rgba(79, 110, 247, 0.12);
+}
+
+.form-error {
+  color: #d32f2f;
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.add-form button {
+  width: 100%;
+  padding: 12px;
+  background: #4f6ef7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.add-form button:hover:not(:disabled) {
+  background: #3b5de7;
+}
+
+.add-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ── Holdings Table ── */
+
+.table-wrapper {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.table-wrapper h2 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.93rem;
+}
+
+thead th {
+  text-align: right;
+  padding: 10px 12px;
+  border-bottom: 2px solid #e8e8e8;
+  font-weight: 600;
+  color: #555;
+  white-space: nowrap;
+}
+
+tbody td {
+  padding: 12px;
+  border-bottom: 1px solid #f0f0f0;
+  vertical-align: middle;
+}
+
+tbody tr:hover {
+  background: #f8f9fd;
+}
+
+.name-cell {
+  font-weight: 500;
+}
+
+.value-cell {
+  font-weight: 600;
+  color: #2e7d32;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #bbb;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.delete-btn:hover {
+  color: #d32f2f;
+  background: #fdecea;
+}
+
+/* ── Footer (total) ── */
+
+tfoot td {
+  padding: 14px 12px;
+  border-top: 2px solid #e8e8e8;
+  font-weight: 700;
+}
+
+.total-label {
+  text-align: right;
+  color: #333;
+  font-size: 1rem;
+}
+
+.total-value {
+  color: #1a5e1f;
+  font-size: 1.05rem;
+}
+
+/* ── States ── */
+
+.loading-text,
+.empty-text {
+  text-align: center;
+  padding: 40px 16px;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 600px) {
+  .app {
+    padding: 16px 10px 48px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  .add-form,
+  .table-wrapper {
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  table {
+    font-size: 0.85rem;
+  }
+
+  thead th,
+  tbody td,
+  tfoot td {
+    padding: 8px 6px;
+  }
+}
